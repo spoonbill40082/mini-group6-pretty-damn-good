@@ -17,7 +17,7 @@ export const apiWithNoToken: AxiosInstance = axios.create({
 apiWithNoToken.interceptors.response.use(
   (res: AxiosResponse) => res.data,
   (err) => {
-    return Promise.reject(err.response.data);
+    return Promise.reject(err.response.data);    
   },
 );
 
